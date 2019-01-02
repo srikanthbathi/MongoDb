@@ -40,8 +40,9 @@
   
   Matches documents that contains array fields with atleast one element that satisfies all the specified query criteria.
   
-  { <field>: { $elemMatch: { <query1>, <query2>, ... } } }
+  { field: { $elemMatch: { query1, query2, ... } } }
   
+  **$elemMatch, $slice, and $ are the only way to project specific elements to include in the returned array. For instance, you cannot project specific array elements using the array index; e.g. { "instock.0": 1 } projection will not project the array with the first element.**
   
   
   
