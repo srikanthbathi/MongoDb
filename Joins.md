@@ -26,18 +26,18 @@ db.inventory.insert([
 ])
 
 
-db.orders.aggregate([
+**db.orders.aggregate([**
 
-{
- $lookup:{
+**{
+ $lookup:{**
  
- from:"inventory",
+ **from:"inventory",**
  
- localField:"item",
+ **localField:"item",**
  
- foreignFiels:"sku",
+ **foreignFiels:"sku",**
  
- as:"inventory_details"
+ **as:"inventory_details"**
  
- }
-}])
+ **}
+}])**
